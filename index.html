@@ -323,6 +323,19 @@ body.locked{overflow:hidden}
   .m-lines circle.dot{opacity:1}
 }
 
+
+/* ---------- compra por WhatsApp ---------- */
+.wa{display:inline-flex;align-items:center;gap:.7em;text-decoration:none;font-family:var(--f-body);line-height:1.25;border-radius:14px;padding:.75em 1em;transition:transform .2s,background .2s}
+.wa svg{width:26px;height:26px;flex:none}
+.wa b{display:block;font-weight:800;font-size:.98rem}
+.wa small{display:block;font-size:.8rem;opacity:.85}
+.hero .wa{margin-top:16px;color:#fff;border:1.5px solid rgba(37,211,102,.55);background:rgba(18,140,74,.18)}
+.hero .wa svg{color:#3BE07F}
+.hero .wa:hover{background:rgba(18,140,74,.35);transform:translateY(-2px)}
+.receipt .or{display:flex;align-items:center;gap:12px;margin-top:16px;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+.receipt .or::before,.receipt .or::after{content:"";flex:1;height:1px;background:#d9ccb8}
+.receipt .wa{width:100%;margin-top:12px;background:#128C4A;color:#fff;justify-content:center;text-align:left}
+.receipt .wa:hover{background:#0f7a40;transform:translateY(-2px)}
 @media (max-width:900px){
   .hero .wrap{grid-template-columns:1fr;gap:40px;padding-block:44px 64px}
   .stage{max-width:460px;margin:0 auto;width:100%}
@@ -371,6 +384,7 @@ body.locked{overflow:hidden}
   <symbol id="i-tap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11V4.5a1.5 1.5 0 0 1 3 0V10m0-.5a1.5 1.5 0 0 1 3 0V11m0-.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-.6a6 6 0 0 1-4.6-2.2L4 15.6a1.5 1.5 0 0 1 2.3-1.9L9 16"/></symbol>
   <symbol id="i-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5v14l-4.5-4.5H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 .8a4 4 0 0 1-1.8-1.8l.8-1-1-2z"/></symbol>
 </svg>
 
 <header class="topbar">
@@ -401,6 +415,7 @@ body.locked{overflow:hidden}
         </div>
         <a class="cta js-buy" href="https://pay.hotmart.com/H106251262E?off=yxp841fz" target="_blank" rel="noopener"><svg><use href="#i-cart"/></svg>Quiero mi pack</a>
       </div>
+      <a class="wa js-wa rise" style="animation-delay:1.75s" href="https://wa.me/573238064905?text=Hola%2C%20quiero%20el%20Pack%20Chef%20Creativo%20de%207%20recetarios%20por%20%2415.000.%20%C2%BFMe%20ayudas%20a%20pagar%20por%20Nequi%2C%20Daviplata%20o%20llave%20Bre-B%3F" target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg><span><b>¿Prefieres Nequi, Daviplata o llave Bre-B?</b><small>Compra por WhatsApp · 323 806 4905</small></span></a>
       <div class="trust-line rise" style="animation-delay:1.85s">
         <span><svg><use href="#i-check"/></svg>Pago único</span>
         <span><svg><use href="#i-check"/></svg>Acceso inmediato</span>
@@ -641,6 +656,8 @@ body.locked{overflow:hidden}
         <span class="off">Ahorras $5.000</span>
       </div>
       <a class="cta js-buy" href="https://pay.hotmart.com/H106251262E?off=yxp841fz" target="_blank" rel="noopener"><svg><use href="#i-cart"/></svg>Quiero mi pack por $15.000</a>
+      <p class="or">o</p>
+      <a class="wa js-wa" href="https://wa.me/573238064905?text=Hola%2C%20quiero%20el%20Pack%20Chef%20Creativo%20de%207%20recetarios%20por%20%2415.000.%20%C2%BFMe%20ayudas%20a%20pagar%20por%20Nequi%2C%20Daviplata%20o%20llave%20Bre-B%3F" target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg><span><b>Comprar por WhatsApp</b><small>Paga con Nequi, Daviplata o llave Bre-B</small></span></a>
       <p class="note">Pago único. Sin suscripciones.</p>
     </div>
     </div>
@@ -662,6 +679,7 @@ body.locked{overflow:hidden}
       <details><summary>¿Es un libro físico?</summary><p>No. Son 7 recetarios digitales en PDF. Los abres en el celular, la tablet o el computador, y si quieres los puedes imprimir.</p></details>
       <details><summary>¿Cómo los recibo?</summary><p>El pago se hace por Hotmart. Apenas se confirma, te llega al correo el acceso para descargar el pack.</p></details>
       <details><summary>¿Necesito Air Fryer?</summary><p>Solo para dos de los recetarios. Las sopas, postres, ensaladas, desayunos y granizados se preparan en una cocina normal.</p></details>
+      <details><summary>¿Puedo pagar por Nequi o Daviplata?</summary><p>Sí. Escríbenos por WhatsApp al 323 806 4905 y pagas por Nequi, Daviplata o llave Bre-B. Apenas confirmemos el pago te enviamos el pack.</p></details>
       <details><summary>¿Tengo que pagar mensualidad?</summary><p>No. Pagas $15.000 COP una sola vez y el pack queda tuyo.</p></details>
     </div>
   </div>
@@ -939,8 +957,9 @@ body.locked{overflow:hidden}
 
 <script>
 document.addEventListener('click',function(e){
-  var a=e.target.closest('.js-buy');
-  if(a&&window.fbq){fbq('track','InitiateCheckout',{content_name:'Pack Chef Creativo',value:15000,currency:'COP'});}
+  if(!window.fbq) return;
+  if(e.target.closest('.js-buy')) fbq('track','InitiateCheckout',{content_name:'Pack Chef Creativo',value:15000,currency:'COP'});
+  if(e.target.closest('.js-wa')) fbq('track','Contact',{content_name:'Pack Chef Creativo - WhatsApp'});
 });
 </script>
 </body>
