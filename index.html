@@ -118,6 +118,14 @@ em.s{font-family:var(--f-accent);font-style:italic;font-weight:400;letter-spacin
 @keyframes steam{0%{opacity:0;transform:translateY(40%) scale(.6)}30%{opacity:.9}100%{opacity:0;transform:translateY(-60%) scale(1.4)}}
 
 /* ---------- tira de película ---------- */
+.film-head{background:#050805;color:var(--on-night);text-align:center;padding-block:26px 6px}
+.fh-q{font-family:var(--f-display);font-weight:800;font-size:clamp(1.5rem,3.6vw,2.2rem);line-height:1.1;text-wrap:balance}
+.fh-q em.s{color:var(--gold);font-size:1.12em}
+.fh-a{margin-top:12px;display:inline-flex;align-items:center;gap:.5em;background:var(--flame);color:#fff;font-weight:800;font-size:.98rem;padding:.6em 1.1em;border-radius:999px;animation:nudge 2.4s ease-in-out infinite}
+.fh-a svg{width:20px;height:20px}
+@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+.reel button{position:relative}
+.reel button::after{content:"Ver receta";position:absolute;left:50%;bottom:10px;transform:translateX(-50%);background:rgba(234,88,12,.95);color:#fff;font:800 .74rem var(--f-body);letter-spacing:.04em;padding:.4em .8em;border-radius:999px;white-space:nowrap;box-shadow:0 6px 14px rgba(0,0,0,.45)}
 .film{background:#050805;padding-block:18px;overflow:hidden;position:relative}
 .film::before,.film::after{content:"";position:absolute;left:0;right:0;height:14px;background:repeating-linear-gradient(90deg,transparent 0 10px,#2b2f2a 10px 26px,transparent 26px 36px);opacity:.9}
 .film::before{top:2px}.film::after{bottom:2px}
@@ -318,6 +326,7 @@ body.locked{overflow:hidden}
   .lbl-c b{font-size:.84rem}
 }
 @media (prefers-reduced-motion:reduce){
+  .fh-a{animation:none}
   .lbl-c,.m-expr{opacity:1;transform:none}
   .m-lines line{stroke-dashoffset:0}
   .m-lines circle.dot{opacity:1}
@@ -470,6 +479,12 @@ body.locked{overflow:hidden}
 </section>
 
 <!-- TIRA DE PELÍCULA -->
+<div class="film-head">
+  <div class="wrap">
+    <p class="fh-q">¿Quieres ver cómo son los libros <em class="s">por dentro?</em></p>
+    <p class="fh-a"><svg><use href="#i-tap"/></svg>Toca cualquier libro y mira una receta</p>
+  </div>
+</div>
 <div class="film" aria-label="Portadas de los 7 recetarios. Toca una para ver una receta">
   <div class="reel" id="reel">
     <button type="button" data-r="pollo" aria-label="Ver una receta de 90 Recetas en Air Fryer"><img src="airfryer90.jpg" alt="90 Recetas en Air Fryer" loading="lazy"></button>
